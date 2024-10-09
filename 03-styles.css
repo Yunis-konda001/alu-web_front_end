@@ -230,7 +230,10 @@
     padding: 0;
     list-style: none;
     text-align: center;
-    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 0;
+    transition: max-height .2s ease-out;
   }
   
   .nav .nav-item {
@@ -272,7 +275,13 @@
   }
 
   @media  (max-width: 767px){
-
+    .navbar-menu {
+      display: none;
+  }
+    :root {
+      --nav-item-margin: 0;
+      flex: 1;
+    }
   }
   
   /* Header
